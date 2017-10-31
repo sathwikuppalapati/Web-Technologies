@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SathwikUppalapati.io</title>
+    <meta charset="utf-8">
+    <meta name="description" content="My professional website">
+    <meta name="keywords" content="resume, professional website, portfolio, sathwik, uppalapati,  web design, developer">
+    <meta name="author" content="sathwik">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!--To animate the profile pic - to incresase the size -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<Script type = "text/javascript">
+$(document).ready(function1 () {
+$('myimg').on({
+mouseover: function1 () {
+$(this).animate({
+'height' :400,
+'width' :400
+}, 3000);
+},
+mouseout : function1 () {
+$(this).animate({
+'height' : 100,
+'width' :100
+},3000);
+}
+});
+});
+</script>
+ <!-- This is to perform the click method -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function2 () {
+    $("button").click(function2(){
+        $("p").toggle();
+    });
+});
+</script>
+
+</head>
+
+<body>
+
+    <section>
+        <header id="page-top" class="homepagetop">
+            <div class="hometop">
+                <nav id="navhometop">
+                    <ul class="list" style="list-style-type:none">
+                        <li><a href="Contact.html">Contact</a> &nbsp; &nbsp;</li>
+                        <li><a href="Education.html">Education</a> &nbsp; &nbsp;</li>
+                        <li><a href="Aboutme.html">About</a>&nbsp; &nbsp;</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+
+<!-- This code creates the transparent profile box -->
+    <div class="prof-box">
+        <img id = "myimg" src="/Resume-Website/Images/profilepic.jpg" alt="a" class="prof-pic">
+        <h1> Sathwik Uppalapati </h1>
+        <h5> ISM Graduate Student at Marist College </h5>
+
+        <div class="line-break">
+            <p> My passion is to develop awsome web applications </p>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/uppalapati.sathwik" target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://github.com/sathwikuppalapati" target="_blank" > <i class="fa fa-github" aria-hidden="true"></i></a>
+            <i class="fa fa-globe" aria-hidden="true" onclick="newpage()"></i>
+            
+            <script type="text/javascript">
+                function newpage() {
+                    window.location = '/Resume-Website/Uppalapati Sathwik.pdf'
+                }
+            </script>
+        </div>
+
+    </div>
+    <div class="intro">
+        <button onclick="newpage()">Resume</button>
+        <button onclick="func()"> <a href="/Resume-Website/Uppalapati Sathwik.pdf " download="new PDF Name"> click here to download the PDF </a> </button>
+        <script>
+            function func() {
+                alert("Downloading");
+            }
+        </script>
+        <br>
+        <br>
+        <address>
+    <a href="mailto:uppalapati8080@gmail.com" target= "https://www.google.com/gmail/">Sathwik Uppalapati</a>
+    <br>
+    <a href= "Weather.html">Weather Forecast</a>
+    </address>
+    </div>
+   
+
+</body>
+
+</html>
