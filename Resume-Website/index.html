@@ -20,6 +20,43 @@
     gtag('config', 'UA-109204253-1');
     </script>
 
+ <!--javascript for cookies-->
+<script type="text/javascript">
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*1*60*60*1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var cc = document.cookie.split(';');
+    for(var i = 0; i < cc.length; i++) {
+        var temp = cc[i];
+        while (temp.charAt(0) == ' ') {
+            temp = temp.substring(1);
+        }
+        if (temp.indexOf(name) == 0) {
+            return temp.substring(name.length, temp.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome back to my website " + user);
+    } else {
+       user = prompt(" Please feel free to enter any feedback or comments about me. Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 360);
+       }
+    }
+}
+</script>
+    
 <!--To animate the profile pic - to incresase the size -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <Script type = "text/javascript">
