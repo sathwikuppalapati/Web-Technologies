@@ -1,0 +1,12 @@
+function validateForm() {
+	var name = document.getElementById("inputName").value;
+	var email = document.getElementById("inputEmail").value;
+	var reason = document.getElementById("inputReason").value;
+	var subject = document.getElementById("inputSubject").value;
+	var message = document.getElementById("inputMessage").value;
+
+	if(!name || !email || !subject || !message){
+		alert("All fields are required!");
+		return false;
+	}
+}

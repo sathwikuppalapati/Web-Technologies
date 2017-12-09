@@ -1,0 +1,7 @@
+var $dropdown = $('#inputOptions');	
+$.get('http://echo.jsontest.com/Option1/Job Opening/Option2/Personal/Option3/Buisness' , function(data){
+  $dropdown.html('');
+  jQuery.each( data, function( i, val ) {
+  	$dropdown.append('<li><a href="#" class="option" id= "' + i + '">' + val.replace("%20", " ") + '</a></li>');
+  });
+});
